@@ -2,7 +2,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:recipe_app_mobile/Models/recipebook.dart';
-import 'recipedetails.dart'; 
+import 'package:recipe_app_mobile/Screens/loginpage.dart';
+import 'recipedetails.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -11,14 +12,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final TextEditingController _searchController = TextEditingController();
-  String? _selectedFoodType; 
+  String? _selectedFoodType;
   List<RecipeBook> _recipes = [];
   List<String> _foodTypes = [];
 
   @override
   void initState() {
     super.initState();
-    loadRecipes(); 
+    loadRecipes();
   }
 
   Future<void> loadRecipes() async {
@@ -26,12 +27,17 @@ class _HomePageState extends State<HomePage> {
     List<dynamic> jsonResponse = json.decode(jsonString);
     setState(() {
       _recipes = jsonResponse.map((json) => RecipeBook.fromJson(json)).toList();
-      _foodTypes = _recipes
-          .map((recipe) => recipe.foodType ?? 'Other')
-          .toSet()
-          .toList();
-      _foodTypes.insert(0, 'All Recipes'); 
+      _foodTypes =
+          _recipes.map((recipe) => recipe.foodType ?? 'Other').toSet().toList();
+      _foodTypes.insert(0, 'All Recipes');
     });
+  }
+
+  void _logout() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => LoginPage()),
+    );
   }
 
   @override
@@ -39,7 +45,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Recipe Book'),
-        automaticallyImplyLeading: false, 
+        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: _logout,
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -60,19 +72,18 @@ class _HomePageState extends State<HomePage> {
               }).toList(),
               onChanged: (String? newValue) {
                 setState(() {
-                  _selectedFoodType = newValue; 
+                  _selectedFoodType = newValue;
                 });
               },
             ),
-
-            const SizedBox(height: 20), 
+            const SizedBox(height: 20),
             Expanded(
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  childAspectRatio: 0.7, 
-                  crossAxisSpacing: 16.0, 
-                  mainAxisSpacing: 16.0, 
+                  childAspectRatio: 0.7,
+                  crossAxisSpacing: 16.0,
+                  mainAxisSpacing: 16.0,
                 ),
                 itemCount: _selectedFoodType == null ||
                         _selectedFoodType == 'All Recipes'
@@ -107,10 +118,8 @@ class _HomePageState extends State<HomePage> {
             MaterialPageRoute(
               builder: (context) => RecipeDetail(
                 foodName: recipe.foodName ?? 'Unknown',
-                ingredients: recipe
-                    .ingredients, 
-                steps: recipe
-                    .steps, 
+                ingredients: recipe.ingredients,
+                steps: recipe.steps,
               ),
             ),
           );
