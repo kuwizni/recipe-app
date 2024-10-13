@@ -1,0 +1,118 @@
+[
+    {
+        "food_name": "Chicken Rendang",
+        "food_type": "Asian",
+        "ingredients": [
+            "1 large chicken",
+            "1 ladle of blended chili",
+            "1 large bowl of thick coconut milk",
+            "1/2 small bowl of tamarind water",
+            "3 tablespoons of grated coconut (kerisik)",
+            "2 turmeric leaves",
+            "2 kaffir lime leaves",
+            "Salt and sugar to taste",
+            "1 large bowl of oil for frying",
+            "2 sticks of cinnamon",
+            "3 star anise",
+            "5 cardamom pods",
+            "1 large onion",
+            "8 shallots",
+            "5 cloves of garlic",
+            "2 inches of ginger",
+            "3 pieces of fresh turmeric",
+            "2 inches of galangal",
+            "2 stalks of lemongrass"
+        ],
+        "steps": [
+            "Clean the chicken and drain it.",
+            "Heat the oil and saut\u00e9 the frying spices, blended ingredients, and blended chili. Stir gently and cook until the oil separates and the mixture is crisp. The color of the saut\u00e9ed ingredients will turn slightly darker.",
+            "Add the chicken and let it cook for 5-10 minutes. The chicken will release a bit of water during this process.",
+            "Add the thick coconut milk and tamarind water. Stir gently over medium heat until the sauce thickens.",
+            "Add the grated coconut (kerisik), turmeric leaves, and kaffir lime leaves. Season with salt and sugar to taste.",
+            "Garnish with sliced turmeric leaves."
+        ]
+    },
+    {
+        "food_name": "Hamburger",
+        "food_type": "Western",
+        "ingredients": [
+            "Bun",
+            "Beef patty",
+            "Lettuce",
+            "Cheese",
+            "Tomato",
+            "Onion"
+        ],
+        "steps": [
+            "Toast the buns.",
+            "Grill the beef patty.",
+            "Assemble the burger with lettuce, cheese, tomato, and onion.",
+            "Serve with condiments."
+        ]
+    },
+    {
+        "food_name": "Pizza",
+        "food_type": "Western",
+        "ingredients": [
+            "Pizza dough",
+            "Tomato sauce",
+            "Cheese",
+            "Pepperoni",
+            "Olive oil"
+        ],
+        "steps": [
+            "Preheat the oven to 475°F.",
+            "Spread tomato sauce on the pizza dough.",
+            "Add cheese and pepperoni.",
+            "Bake in the oven for 10-15 minutes.",
+            "Drizzle olive oil before serving."
+        ]
+    },
+    {
+        "food_name": "Pandan Steamed Cake",
+        "ingredients": [
+            "4 eggs",
+            "1 cup / 200g castor sugar",
+            "1 tablespoon / 20g ovalette",
+            "1 tablespoon / 15ml pandan emulco",
+            "1/2 teaspoon / 2.5ml pandan flavor (optional)",
+            "1/4 cup / 60ml corn oil",
+            "1/4 cup / 60ml full cream milk",
+            "1 1/2 cups / 195g self-raising flour",
+            "1 teaspoon / 5ml green coloring",
+            "150g gula melaka",
+            "1/4 cup / 60ml water",
+            "1/4 teaspoon salt",
+            "1 pandan leaf",
+            "1/2 tablespoon corn flour",
+            "2 tablespoons water",
+            "1/4 cup / 240ml Anchor Whipping Cream",
+            "2 cups / 480ml Anchor Whipping Cream",
+            "250g Anchor Cream Cheese",
+            "1/2 cup / 65g icing sugar"
+        ],
+        "steps": [
+            "Beat the eggs and castor sugar until fluffy and the color turns pale yellow.",
+            "Add ovalette and continue beating until the mixture turns white.",
+            "Incorporate pandan emulco, pandan flavor (or vanilla essence), corn oil (or melted butter), and green coloring.",
+            "Mix until well combined.",
+            "For steaming, use 5 aluminum containers sized 3x7 inches. Grease the containers with a little cooking oil.",
+            "Pour the mixture evenly into the containers.",
+            "Steam for 20-25 minutes (the larger the size, the longer the steaming time).",
+            "Let the cake cool.",
+            "Whip the whipping cream until stiff.",
+            "Mash the cream cheese with icing sugar until smooth.",
+            "Combine the cream cheese mixture with the whipping cream.",
+            "Transfer into a piping bag and refrigerate for 30 minutes.",
+            "Cook water, gula melaka, salt, and pandan leaf until boiling and thick.",
+            "Mix corn flour with a little water. Pour the corn flour mixture into the gula melaka syrup.",
+            "Stir well, then turn off the heat.",
+            "Add the whipping cream and let it cool.",
+            "Transfer into a piping bag.",
+            "Cut the pandan cake into two layers.",
+            "Drizzle the gula melaka syrup over the first layer, then pipe with the cream topping.",
+            "Place the second layer of cake, then pipe topping cream and gula melaka syrup on top.",
+            "Finally, decorate the cake with pandan leaf slices."
+        ]
+    }
+]
