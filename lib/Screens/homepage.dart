@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:recipe_app_mobile/Models/recipebook.dart';
+import 'package:recipe_app_mobile/Screens/addrecipe.dart';
 import 'package:recipe_app_mobile/Screens/loginpage.dart';
 import 'recipedetails.dart';
 
@@ -47,6 +48,22 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Recipe Book'),
         automaticallyImplyLeading: false,
         actions: [
+          IconButton(
+            icon: const Icon(Icons.add),
+            onPressed: () async {
+              final newRecipe = await Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => AddRecipe(foodTypes: _foodTypes),
+                ),
+              );
+              if (newRecipe != null) {
+                setState(() {
+                  _recipes.add(newRecipe);
+                });
+              }
+            },
+          ),
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: _logout,

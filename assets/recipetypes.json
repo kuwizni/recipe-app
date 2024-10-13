@@ -70,6 +70,7 @@
     },
     {
         "food_name": "Pandan Steamed Cake",
+        "food_type" : "Other",
         "ingredients": [
             "4 eggs",
             "1 cup / 200g castor sugar",

@@ -1,3 +1,4 @@
+import 'package:recipe_app_mobile/Models/recipebook.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
@@ -57,4 +58,9 @@ class DatabaseHelper {
     );
     return results.isNotEmpty;
   }
+
+  Future<int> addRecipe(RecipeBook recipe) async {
+  final db = await database;
+  return await db.insert('recipes', recipe.toJson());
+}
 }
